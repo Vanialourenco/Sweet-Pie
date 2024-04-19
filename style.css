@@ -1,0 +1,167 @@
+/* Redefinição de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout geral */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #2c2222;
+    background-color: #cb7e7e;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f2bfbf;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #1b1a1a;
+}
+
+/* Destaque */
+.destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #cb7e7e;
+}
+
+.destaque h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.destaque img {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+.destaque p {
+    text-align: center;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.conteudo article {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.carousel-item img {
+    width: 500px; 
+    height: 500px; 
+    object-fit: cover; 
+
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ccc;
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 768px) {
+    /* Ajustes para telas menores */
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+    }
+    
+    .card img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    
+    .info p {
+        font-size: 0.8rem;
+        color: #666;
+    }
+    
+    .preco {
+        font-weight: bold;
+    }
+    
+    .info button {
+        background-color: #007bff;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    /* Media Queries para responsividade */
+    
+    @media (min-width: 768px) {
+        /* Ajustes para telas maiores */
+    
+        .card {
+            flex-direction: row;
+            width: 50%;
+        }
+    
+        .card img {
+            flex: 1;
+            max-width: 500px;
+        }
+    
+        .info {
+            flex: 1;
+            padding: 2rem;
+        }
+    }
